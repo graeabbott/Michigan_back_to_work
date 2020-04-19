@@ -1,0 +1,92 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background:#92bde7;
+    color: #485e74;
+    line-height: 1.6;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding:1em;
+}
+
+.container{
+    max-width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1em;
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+}
+
+.brand{
+    text-align: center;
+}
+
+.brand span{
+    color:#fff;
+}
+
+.wrapper{
+    box-shadow: 0 0 20px 0 rgba(72,94,116,0.7);
+}
+
+.wrapper > *{
+    padding: 1em;
+}
+
+.form-info{
+    background:#c9e6ff
+}
+
+.form-info h3, .form-info ul{
+    text-align: center;
+    margin:0 0 1rem 0;
+}
+
+.form-1 > *{
+    text-align: center;
+}
+
+.form-1{
+    background: #f9feff;
+}
+
+/* Form styles */
+
+.form-1 form{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+}
+
+.form-1 form label{
+    display: block;
+}
+
+.form-1 form p{
+    margin:0;
+    padding:1em;
+}
+
+.form-1 form button, .form-1 form input, .form-1 form textarea{
+    width: 25%;
+    padding:1em;
+    border: 1px solid #c9e6ff;
+}
+
+.form-1 form button{
+    background: #c9e6ff;
+    border:0;
+    text-transform: uppercase;
+}
+
+.form-1 form button:hover, .form-1 form button:focus{
+    background:#92bed7;
+    color: #fff;
+    outline: 0;
+    transition: background-color 2s ease-out;
+}
