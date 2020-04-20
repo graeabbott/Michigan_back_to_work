@@ -5,10 +5,10 @@ webpackJsonp([2],{
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MedicalPageModule", function() { return MedicalPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SymptomsPageModule", function() { return SymptomsPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__medical__ = __webpack_require__(100);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__symptoms__ = __webpack_require__(99);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,23 +18,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var MedicalPageModule = /** @class */ (function () {
-    function MedicalPageModule() {
+var SymptomsPageModule = /** @class */ (function () {
+    function SymptomsPageModule() {
     }
-    MedicalPageModule = __decorate([
+    SymptomsPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__medical__["a" /* MedicalPage */],
+                __WEBPACK_IMPORTED_MODULE_2__symptoms__["a" /* SymptomsPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__medical__["a" /* MedicalPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__symptoms__["a" /* SymptomsPage */]),
             ],
         })
-    ], MedicalPageModule);
-    return MedicalPageModule;
+    ], SymptomsPageModule);
+    return SymptomsPageModule;
 }());
 
-//# sourceMappingURL=medical.module.js.map
+//# sourceMappingURL=symptoms.module.js.map
 
 /***/ })
 

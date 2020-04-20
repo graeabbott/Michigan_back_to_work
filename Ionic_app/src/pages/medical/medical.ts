@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
+import { TrackingPage } from '../tracking/tracking'
 
 /**
  * Generated class for the MedicalPage page.
@@ -68,7 +69,7 @@ export class MedicalPage {
     });
     await alert.present();
   }
-        
+
   async testingQuestion() {
     const alert = await this.alertCtrl.create({
       // title: 'Prompt!',
@@ -138,6 +139,8 @@ export class MedicalPage {
           text: 'Submit',
           handler: data => {
             // TODO pull up final info
+            //Ask for Zip Code
+            this.nav2Tracking();
           }
         },
         {
@@ -149,6 +152,10 @@ export class MedicalPage {
       ]
     });
     await alert.present();
+  }
+  // Navigate to the Tracking Page
+  nav2Tracking(){
+    this.navCtrl.push(TrackingPage);
   }
 
 }

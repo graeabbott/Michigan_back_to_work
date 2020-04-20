@@ -10,6 +10,7 @@ import { LoginPage } from '../pages/login/login'
 import { TemperaturePage } from '../pages/temperature/temperature'
 import { SymptomsPage } from '../pages/symptoms/symptoms'
 import { MedicalPage } from '../pages/medical/medical'
+import { TrackingPage } from '../pages/tracking/tracking'
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { MedicalPage } from '../pages/medical/medical'
     LoginPage,
     TemperaturePage,
     SymptomsPage,
-    MedicalPage
+    MedicalPage,
+    TrackingPage
   ],
   imports: [
     BrowserModule,
@@ -32,7 +34,8 @@ import { MedicalPage } from '../pages/medical/medical'
     LoginPage,
     TemperaturePage,
     SymptomsPage,
-    MedicalPage
+    MedicalPage,
+    TrackingPage
   ],
   providers: [
     StatusBar,
