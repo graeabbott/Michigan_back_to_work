@@ -8,6 +8,7 @@ webpackJsonp([5],{
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(15);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__tracking_tracking__ = __webpack_require__(101);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__assets_json_jsonEnglish__ = __webpack_require__(46);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -52,6 +53,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
         if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
     }
 };
+
 
 
 
@@ -84,36 +86,36 @@ var MedicalPage = /** @class */ (function () {
                 switch (_a.label) {
                     case 0: return [4 /*yield*/, this.alertCtrl.create({
                             // title: 'Prompt!',
-                            message: 'Have you contacted a medical provider about your symptoms today?',
+                            message: __WEBPACK_IMPORTED_MODULE_3__assets_json_jsonEnglish__["a" /* QUESTIONS */][2]["questions"][0]["question"],
                             inputs: [
                                 {
                                     name: 'yes',
-                                    label: 'Yes, by phone.',
+                                    label: __WEBPACK_IMPORTED_MODULE_3__assets_json_jsonEnglish__["a" /* QUESTIONS */][2]["questions"][0]["answers"][0],
                                     type: 'radio',
                                     value: 'phone'
                                 },
                                 {
                                     name: 'yes',
-                                    label: 'Yes, in person.',
+                                    label: __WEBPACK_IMPORTED_MODULE_3__assets_json_jsonEnglish__["a" /* QUESTIONS */][2]["questions"][0]["answers"][1],
                                     type: 'radio',
                                     value: 'in person'
                                 },
                                 {
                                     name: 'no',
-                                    label: 'No',
+                                    label: __WEBPACK_IMPORTED_MODULE_3__assets_json_jsonEnglish__["a" /* QUESTIONS */][2]["questions"][0]["answers"][2],
                                     type: 'radio',
                                     value: 'no'
                                 }
                             ],
                             buttons: [
                                 {
-                                    text: 'Submit',
+                                    text: __WEBPACK_IMPORTED_MODULE_3__assets_json_jsonEnglish__["a" /* QUESTIONS */][2]["questions"][0]["answers"][3],
                                     handler: function (data) {
                                         _this.testingQuestion();
                                     }
                                 },
                                 {
-                                    text: 'Back',
+                                    text: __WEBPACK_IMPORTED_MODULE_3__assets_json_jsonEnglish__["a" /* QUESTIONS */][2]["questions"][0]["answers"][4],
                                     handler: function (data) {
                                         _this.navCtrl.pop();
                                     }
@@ -138,36 +140,36 @@ var MedicalPage = /** @class */ (function () {
                 switch (_a.label) {
                     case 0: return [4 /*yield*/, this.alertCtrl.create({
                             // title: 'Prompt!',
-                            message: 'Have you had a positive COVID-19 test result since your last report?',
+                            message: __WEBPACK_IMPORTED_MODULE_3__assets_json_jsonEnglish__["a" /* QUESTIONS */][2]["questions"][1]["question"],
                             inputs: [
                                 {
                                     name: 'yes',
-                                    label: 'Yes',
+                                    label: __WEBPACK_IMPORTED_MODULE_3__assets_json_jsonEnglish__["a" /* QUESTIONS */][2]["questions"][1]["answers"][0],
                                     type: 'radio',
                                     value: 'yes'
                                 },
                                 {
                                     name: 'no',
-                                    label: 'No',
+                                    label: __WEBPACK_IMPORTED_MODULE_3__assets_json_jsonEnglish__["a" /* QUESTIONS */][2]["questions"][1]["answers"][1],
                                     type: 'radio',
                                     value: 'no'
                                 },
                                 {
                                     name: 'waiting',
-                                    label: 'I had a test but I have not gotten the results yet.',
+                                    label: __WEBPACK_IMPORTED_MODULE_3__assets_json_jsonEnglish__["a" /* QUESTIONS */][2]["questions"][1]["answers"][2],
                                     type: 'radio',
                                     value: 'waiting'
                                 }
                             ],
                             buttons: [
                                 {
-                                    text: 'Submit',
+                                    text: __WEBPACK_IMPORTED_MODULE_3__assets_json_jsonEnglish__["a" /* QUESTIONS */][2]["questions"][1]["answers"][3],
                                     handler: function (data) {
                                         _this.familyQuestion();
                                     }
                                 },
                                 {
-                                    text: 'Back',
+                                    text: __WEBPACK_IMPORTED_MODULE_3__assets_json_jsonEnglish__["a" /* QUESTIONS */][2]["questions"][1]["answers"][4],
                                     handler: function (data) {
                                         if (_this.navParams.get('symptoms').length != 0) {
                                             _this.contactAlertPrompt();
@@ -197,24 +199,24 @@ var MedicalPage = /** @class */ (function () {
                 switch (_a.label) {
                     case 0: return [4 /*yield*/, this.alertCtrl.create({
                             // title: 'Prompt!',
-                            message: 'Is anyone in your household sick today?',
+                            message: __WEBPACK_IMPORTED_MODULE_3__assets_json_jsonEnglish__["a" /* QUESTIONS */][2]["questions"][2]["question"],
                             inputs: [
                                 {
                                     name: 'yes',
-                                    label: 'Yes',
+                                    label: __WEBPACK_IMPORTED_MODULE_3__assets_json_jsonEnglish__["a" /* QUESTIONS */][2]["questions"][2]["answers"][0],
                                     type: 'radio',
                                     value: 'no'
                                 },
                                 {
                                     name: 'no',
-                                    label: 'No',
+                                    label: __WEBPACK_IMPORTED_MODULE_3__assets_json_jsonEnglish__["a" /* QUESTIONS */][2]["questions"][2]["answers"][1],
                                     type: 'radio',
                                     value: 'no'
                                 },
                             ],
                             buttons: [
                                 {
-                                    text: 'Submit',
+                                    text: __WEBPACK_IMPORTED_MODULE_3__assets_json_jsonEnglish__["a" /* QUESTIONS */][2]["questions"][2]["answers"][2],
                                     handler: function (data) {
                                         // TODO pull up final info
                                         //Ask for Zip Code
@@ -222,7 +224,7 @@ var MedicalPage = /** @class */ (function () {
                                     }
                                 },
                                 {
-                                    text: 'Back',
+                                    text: __WEBPACK_IMPORTED_MODULE_3__assets_json_jsonEnglish__["a" /* QUESTIONS */][2]["questions"][2]["answers"][3],
                                     handler: function (data) {
                                         _this.testingQuestion();
                                     }
@@ -245,7 +247,7 @@ var MedicalPage = /** @class */ (function () {
     };
     MedicalPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-medical',template:/*ion-inline-start:"/Users/andreeaserban/Desktop/personal/Michigan_back_to_work/Ionic_app/src/pages/medical/medical.html"*/'<!--\n  Generated template for the MedicalPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-navbar>\n    <ion-title></ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"/Users/andreeaserban/Desktop/personal/Michigan_back_to_work/Ionic_app/src/pages/medical/medical.html"*/,
+            selector: 'page-medical',template:/*ion-inline-start:"/Users/bertleon/Desktop/Michigan_back_to_work/Ionic_app/src/pages/medical/medical.html"*/'<!--\n  Generated template for the MedicalPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-navbar>\n    <ion-title></ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"/Users/bertleon/Desktop/Michigan_back_to_work/Ionic_app/src/pages/medical/medical.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* AlertController */]])
     ], MedicalPage);
@@ -263,6 +265,7 @@ var MedicalPage = /** @class */ (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TrackingPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__assets_json_jsonEnglish__ = __webpack_require__(46);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -307,6 +310,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
         if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
     }
 };
+
 
 
 
@@ -335,7 +339,7 @@ var TrackingPage = /** @class */ (function () {
                 switch (_a.label) {
                     case 0: return [4 /*yield*/, this.alertCtrl.create({
                             // title: 'Prompt!',
-                            message: 'What is your Zip Code?',
+                            message: __WEBPACK_IMPORTED_MODULE_2__assets_json_jsonEnglish__["a" /* QUESTIONS */][3]["questions"][0]["question"],
                             inputs: [
                                 {
                                     name: 'zipcode',
@@ -344,13 +348,13 @@ var TrackingPage = /** @class */ (function () {
                             ],
                             buttons: [
                                 {
-                                    text: 'Back',
+                                    text: __WEBPACK_IMPORTED_MODULE_2__assets_json_jsonEnglish__["a" /* QUESTIONS */][3]["questions"][0]["answers"][0],
                                     handler: function (data) {
                                         _this.navCtrl.pop();
                                     }
                                 },
                                 {
-                                    text: 'Continue',
+                                    text: __WEBPACK_IMPORTED_MODULE_2__assets_json_jsonEnglish__["a" /* QUESTIONS */][3]["questions"][0]["answers"][1],
                                     handler: function (data) {
                                         //submit the data
                                         _this.addPhoneNumber();
@@ -379,7 +383,7 @@ var TrackingPage = /** @class */ (function () {
                 switch (_a.label) {
                     case 0: return [4 /*yield*/, this.alertCtrl.create({
                             //Ask for phone number
-                            message: 'What is your phone number?',
+                            message: __WEBPACK_IMPORTED_MODULE_2__assets_json_jsonEnglish__["a" /* QUESTIONS */][3]["questions"][1]["question"],
                             inputs: [
                                 {
                                     name: 'phonenumber',
@@ -388,7 +392,7 @@ var TrackingPage = /** @class */ (function () {
                             ],
                             buttons: [
                                 {
-                                    text: 'Submit',
+                                    text: __WEBPACK_IMPORTED_MODULE_2__assets_json_jsonEnglish__["a" /* QUESTIONS */][3]["questions"][1]["answers"][0],
                                     handler: function (data) {
                                         // TODO: Finished with the form
                                     }
@@ -407,12 +411,11 @@ var TrackingPage = /** @class */ (function () {
     };
     TrackingPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-tracking',template:/*ion-inline-start:"/Users/andreeaserban/Desktop/personal/Michigan_back_to_work/Ionic_app/src/pages/tracking/tracking.html"*/'<!--\n  Generated template for the TrackingPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-navbar>\n    <ion-title></ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"/Users/andreeaserban/Desktop/personal/Michigan_back_to_work/Ionic_app/src/pages/tracking/tracking.html"*/,
+            selector: 'page-tracking',template:/*ion-inline-start:"/Users/bertleon/Desktop/Michigan_back_to_work/Ionic_app/src/pages/tracking/tracking.html"*/'<!--\n  Generated template for the TrackingPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-navbar>\n    <ion-title></ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"/Users/bertleon/Desktop/Michigan_back_to_work/Ionic_app/src/pages/tracking/tracking.html"*/,
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* AlertController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* AlertController */]) === "function" && _c || Object])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* AlertController */]])
     ], TrackingPage);
     return TrackingPage;
-    var _a, _b, _c;
 }());
 
 //# sourceMappingURL=tracking.js.map
@@ -423,10 +426,11 @@ var TrackingPage = /** @class */ (function () {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TemperaturePage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SymptomsPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(15);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__symptoms_symptoms__ = __webpack_require__(99);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__medical_medical__ = __webpack_require__(100);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__assets_json_jsonEnglish__ = __webpack_require__(46);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -476,6 +480,205 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 
 
 /**
+ * Generated class for the SymptomsPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var SymptomsPage = /** @class */ (function () {
+    // symptoms = [];
+    function SymptomsPage(navCtrl, navParams, alertCtrl) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.alertCtrl = alertCtrl;
+    }
+    SymptomsPage.prototype.ionViewWillEnter = function () {
+        console.log('ionViewDidLoad SymptomsPage');
+        this.presentAlertPrompt();
+    };
+    SymptomsPage.prototype.presentAlertPrompt = function () {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            var alert;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.alertCtrl.create({
+                            // title: 'Prompt!',
+                            message: __WEBPACK_IMPORTED_MODULE_3__assets_json_jsonEnglish__["a" /* QUESTIONS */][1]["questions"][0]["question"],
+                            inputs: [
+                                {
+                                    name: 'trouble breathing',
+                                    label: __WEBPACK_IMPORTED_MODULE_3__assets_json_jsonEnglish__["a" /* QUESTIONS */][1]["questions"][0]["answers"][0],
+                                    type: 'checkbox',
+                                    value: 'trouble breathing'
+                                },
+                                {
+                                    name: 'chest pain',
+                                    label: __WEBPACK_IMPORTED_MODULE_3__assets_json_jsonEnglish__["a" /* QUESTIONS */][1]["questions"][0]["answers"][1],
+                                    type: 'checkbox',
+                                    value: 'chest pain'
+                                },
+                                {
+                                    name: 'confusion',
+                                    label: __WEBPACK_IMPORTED_MODULE_3__assets_json_jsonEnglish__["a" /* QUESTIONS */][1]["questions"][0]["answers"][2],
+                                    type: 'checkbox',
+                                    value: 'confusion'
+                                },
+                                {
+                                    name: 'blue lips',
+                                    label: __WEBPACK_IMPORTED_MODULE_3__assets_json_jsonEnglish__["a" /* QUESTIONS */][1]["questions"][0]["answers"][3],
+                                    type: 'checkbox',
+                                    value: 'blue lips'
+                                },
+                                {
+                                    name: 'fever',
+                                    label: __WEBPACK_IMPORTED_MODULE_3__assets_json_jsonEnglish__["a" /* QUESTIONS */][1]["questions"][0]["answers"][4],
+                                    type: 'checkbox',
+                                    value: 'fever'
+                                },
+                                {
+                                    name: 'cough',
+                                    label: __WEBPACK_IMPORTED_MODULE_3__assets_json_jsonEnglish__["a" /* QUESTIONS */][1]["questions"][0]["answers"][5],
+                                    type: 'checkbox',
+                                    value: 'cough'
+                                },
+                                {
+                                    name: 'shortness of breath',
+                                    label: __WEBPACK_IMPORTED_MODULE_3__assets_json_jsonEnglish__["a" /* QUESTIONS */][1]["questions"][0]["answers"][6],
+                                    type: 'checkbox',
+                                    value: 'shortness of breath'
+                                },
+                                {
+                                    name: 'headache',
+                                    label: __WEBPACK_IMPORTED_MODULE_3__assets_json_jsonEnglish__["a" /* QUESTIONS */][1]["questions"][0]["answers"][7],
+                                    type: 'checkbox',
+                                    value: 'headache'
+                                },
+                                {
+                                    name: 'fatigue',
+                                    label: __WEBPACK_IMPORTED_MODULE_3__assets_json_jsonEnglish__["a" /* QUESTIONS */][1]["questions"][0]["answers"][8],
+                                    type: 'checkbox',
+                                    value: 'fatigue'
+                                },
+                                {
+                                    name: 'diarrhea',
+                                    label: __WEBPACK_IMPORTED_MODULE_3__assets_json_jsonEnglish__["a" /* QUESTIONS */][1]["questions"][0]["answers"][9],
+                                    type: 'checkbox',
+                                    value: 'diarrhea'
+                                },
+                                {
+                                    name: 'nausea',
+                                    label: __WEBPACK_IMPORTED_MODULE_3__assets_json_jsonEnglish__["a" /* QUESTIONS */][1]["questions"][0]["answers"][10],
+                                    type: 'checkbox',
+                                    value: 'nausea'
+                                },
+                                {
+                                    name: 'loss of taste/smell',
+                                    label: __WEBPACK_IMPORTED_MODULE_3__assets_json_jsonEnglish__["a" /* QUESTIONS */][1]["questions"][0]["answers"][11],
+                                    type: 'checkbox',
+                                    value: 'loss of taste/smell'
+                                }
+                            ],
+                            buttons: [
+                                {
+                                    text: __WEBPACK_IMPORTED_MODULE_3__assets_json_jsonEnglish__["a" /* QUESTIONS */][1]["questions"][0]["answers"][12],
+                                    handler: function (data) {
+                                        // this.symptoms = data;
+                                        console.log(data);
+                                        var temp = _this.navParams.get('user_temp');
+                                        _this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__medical_medical__["a" /* MedicalPage */], { user_temp: temp, symptoms: data });
+                                    }
+                                },
+                                {
+                                    text: __WEBPACK_IMPORTED_MODULE_3__assets_json_jsonEnglish__["a" /* QUESTIONS */][1]["questions"][0]["answers"][13],
+                                    handler: function (data) {
+                                        _this.navCtrl.pop();
+                                    }
+                                }
+                            ]
+                        })];
+                    case 1:
+                        alert = _a.sent();
+                        return [4 /*yield*/, alert.present()];
+                    case 2:
+                        _a.sent();
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    SymptomsPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-symptoms',template:/*ion-inline-start:"/Users/bertleon/Desktop/Michigan_back_to_work/Ionic_app/src/pages/symptoms/symptoms.html"*/'<!--\n  Generated template for the SymptomsPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-navbar>\n    <ion-title></ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"/Users/bertleon/Desktop/Michigan_back_to_work/Ionic_app/src/pages/symptoms/symptoms.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* AlertController */]])
+    ], SymptomsPage);
+    return SymptomsPage;
+}());
+
+//# sourceMappingURL=symptoms.js.map
+
+/***/ }),
+
+/***/ 103:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TemperaturePage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__symptoms_symptoms__ = __webpack_require__(102);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__assets_json_jsonEnglish__ = __webpack_require__(46);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __generator = (this && this.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [0, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
+
+
+
+
+
+/**
  * Generated class for the TemperaturePage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
@@ -496,7 +699,7 @@ var TemperaturePage = /** @class */ (function () {
                 switch (_a.label) {
                     case 0: return [4 /*yield*/, this.alertController.create({
                             // title: 'Prompt!',
-                            message: 'What is your temperature today?',
+                            message: __WEBPACK_IMPORTED_MODULE_3__assets_json_jsonEnglish__["a" /* QUESTIONS */][0]["questions"][0]["question"],
                             inputs: [
                                 {
                                     name: 'Temperature',
@@ -505,7 +708,7 @@ var TemperaturePage = /** @class */ (function () {
                             ],
                             buttons: [
                                 {
-                                    text: 'Submit',
+                                    text: __WEBPACK_IMPORTED_MODULE_3__assets_json_jsonEnglish__["a" /* QUESTIONS */][0]["questions"][0]["answers"][0],
                                     handler: function (data) {
                                         var temp = +data.Temperature; // convert to int
                                         _this.user_temp = temp;
@@ -520,7 +723,7 @@ var TemperaturePage = /** @class */ (function () {
                                     }
                                 },
                                 {
-                                    text: 'I didn\'t take my temperature today',
+                                    text: __WEBPACK_IMPORTED_MODULE_3__assets_json_jsonEnglish__["a" /* QUESTIONS */][0]["questions"][0]["answers"][1],
                                     handler: function () {
                                         console.log('Confirm no temp');
                                         _this.presentFeelingsForm();
@@ -549,24 +752,24 @@ var TemperaturePage = /** @class */ (function () {
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0: return [4 /*yield*/, this.alertController.create({
-                            message: 'How do you feel today?',
+                            message: __WEBPACK_IMPORTED_MODULE_3__assets_json_jsonEnglish__["a" /* QUESTIONS */][0]["questions"][1]["question"],
                             inputs: [
                                 {
                                     name: 'fine',
                                     type: 'radio',
-                                    label: 'Fine',
+                                    label: __WEBPACK_IMPORTED_MODULE_3__assets_json_jsonEnglish__["a" /* QUESTIONS */][0]["questions"][1]["answers"][0],
                                     value: 'fine',
                                 },
                                 {
                                     name: 'not well',
                                     type: 'radio',
-                                    label: 'Not Well',
+                                    label: __WEBPACK_IMPORTED_MODULE_3__assets_json_jsonEnglish__["a" /* QUESTIONS */][0]["questions"][1]["answers"][1],
                                     value: 'not well',
                                 },
                             ],
                             buttons: [
                                 {
-                                    text: 'Submit',
+                                    text: __WEBPACK_IMPORTED_MODULE_3__assets_json_jsonEnglish__["a" /* QUESTIONS */][0]["questions"][1]["answers"][2],
                                     handler: function (data) {
                                         if (data == 'fine') {
                                             // push to final resources page
@@ -577,7 +780,7 @@ var TemperaturePage = /** @class */ (function () {
                                     }
                                 },
                                 {
-                                    text: 'Back',
+                                    text: __WEBPACK_IMPORTED_MODULE_3__assets_json_jsonEnglish__["a" /* QUESTIONS */][0]["questions"][1]["answers"][3],
                                     handler: function (data) {
                                         _this.presentAlertPrompt();
                                     }
@@ -599,7 +802,7 @@ var TemperaturePage = /** @class */ (function () {
     };
     TemperaturePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-temperature',template:/*ion-inline-start:"/Users/andreeaserban/Desktop/personal/Michigan_back_to_work/Ionic_app/src/pages/temperature/temperature.html"*/'<!--\n  Generated template for the TemperaturePage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-navbar>\n    <ion-title></ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"/Users/andreeaserban/Desktop/personal/Michigan_back_to_work/Ionic_app/src/pages/temperature/temperature.html"*/,
+            selector: 'page-temperature',template:/*ion-inline-start:"/Users/bertleon/Desktop/Michigan_back_to_work/Ionic_app/src/pages/temperature/temperature.html"*/'<!--\n  Generated template for the TemperaturePage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-navbar>\n    <ion-title></ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"/Users/bertleon/Desktop/Michigan_back_to_work/Ionic_app/src/pages/temperature/temperature.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* AlertController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]])
     ], TemperaturePage);
@@ -610,7 +813,7 @@ var TemperaturePage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 112:
+/***/ 113:
 /***/ (function(module, exports) {
 
 function webpackEmptyAsyncContext(req) {
@@ -623,32 +826,32 @@ function webpackEmptyAsyncContext(req) {
 webpackEmptyAsyncContext.keys = function() { return []; };
 webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
 module.exports = webpackEmptyAsyncContext;
-webpackEmptyAsyncContext.id = 112;
+webpackEmptyAsyncContext.id = 113;
 
 /***/ }),
 
-/***/ 153:
+/***/ 154:
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
 	"../pages/login/login.module": [
-		273,
+		274,
 		4
 	],
 	"../pages/medical/medical.module": [
-		277,
+		275,
 		3
 	],
 	"../pages/symptoms/symptoms.module": [
-		274,
+		276,
 		2
 	],
 	"../pages/temperature/temperature.module": [
-		275,
+		277,
 		1
 	],
 	"../pages/tracking/tracking.module": [
-		276,
+		278,
 		0
 	]
 };
@@ -663,12 +866,12 @@ function webpackAsyncContext(req) {
 webpackAsyncContext.keys = function webpackAsyncContextKeys() {
 	return Object.keys(map);
 };
-webpackAsyncContext.id = 153;
+webpackAsyncContext.id = 154;
 module.exports = webpackAsyncContext;
 
 /***/ }),
 
-/***/ 197:
+/***/ 198:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -789,7 +992,7 @@ var LoginPage = /** @class */ (function () {
     };
     LoginPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-login',template:/*ion-inline-start:"/Users/andreeaserban/Desktop/personal/Michigan_back_to_work/Ionic_app/src/pages/login/login.html"*/'<!--\n  Generated template for the LoginPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-navbar>\n    <ion-title>login</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"/Users/andreeaserban/Desktop/personal/Michigan_back_to_work/Ionic_app/src/pages/login/login.html"*/,
+            selector: 'page-login',template:/*ion-inline-start:"/Users/bertleon/Desktop/Michigan_back_to_work/Ionic_app/src/pages/login/login.html"*/'<!--\n  Generated template for the LoginPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-navbar>\n    <ion-title>login</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"/Users/bertleon/Desktop/Michigan_back_to_work/Ionic_app/src/pages/login/login.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* ActionSheetController */]])
     ], LoginPage);
@@ -800,13 +1003,13 @@ var LoginPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 198:
+/***/ 199:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(199);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(221);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(200);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(222);
 
 
 Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_1__app_module__["a" /* AppModule */]);
@@ -814,7 +1017,7 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 
 /***/ }),
 
-/***/ 221:
+/***/ 222:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -822,13 +1025,13 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(31);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(15);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(193);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_status_bar__ = __webpack_require__(196);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_component__ = __webpack_require__(271);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_home_home__ = __webpack_require__(272);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_login_login__ = __webpack_require__(197);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_temperature_temperature__ = __webpack_require__(102);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_symptoms_symptoms__ = __webpack_require__(99);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(194);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_status_bar__ = __webpack_require__(197);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_component__ = __webpack_require__(272);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_home_home__ = __webpack_require__(273);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_login_login__ = __webpack_require__(198);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_temperature_temperature__ = __webpack_require__(103);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_symptoms_symptoms__ = __webpack_require__(102);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_medical_medical__ = __webpack_require__(100);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_tracking_tracking__ = __webpack_require__(101);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -868,10 +1071,10 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["e" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* MyApp */], {}, {
                     links: [
                         { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'LoginPage', segment: 'login', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/medical/medical.module#MedicalPageModule', name: 'MedicalPage', segment: 'medical', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/symptoms/symptoms.module#SymptomsPageModule', name: 'SymptomsPage', segment: 'symptoms', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/temperature/temperature.module#TemperaturePageModule', name: 'TemperaturePage', segment: 'temperature', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/tracking/tracking.module#TrackingPageModule', name: 'TrackingPage', segment: 'tracking', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/medical/medical.module#MedicalPageModule', name: 'MedicalPage', segment: 'medical', priority: 'low', defaultHistory: [] }
+                        { loadChildren: '../pages/tracking/tracking.module#TrackingPageModule', name: 'TrackingPage', segment: 'tracking', priority: 'low', defaultHistory: [] }
                     ]
                 })
             ],
@@ -899,16 +1102,16 @@ var AppModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 271:
+/***/ 272:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyApp; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(15);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(196);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(193);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_temperature_temperature__ = __webpack_require__(102);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(197);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(194);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_temperature_temperature__ = __webpack_require__(103);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -934,7 +1137,7 @@ var MyApp = /** @class */ (function () {
         });
     }
     MyApp = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"/Users/andreeaserban/Desktop/personal/Michigan_back_to_work/Ionic_app/src/app/app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n'/*ion-inline-end:"/Users/andreeaserban/Desktop/personal/Michigan_back_to_work/Ionic_app/src/app/app.html"*/
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"/Users/bertleon/Desktop/Michigan_back_to_work/Ionic_app/src/app/app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n'/*ion-inline-end:"/Users/bertleon/Desktop/Michigan_back_to_work/Ionic_app/src/app/app.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])
     ], MyApp);
@@ -945,7 +1148,7 @@ var MyApp = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 272:
+/***/ 273:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -969,7 +1172,7 @@ var HomePage = /** @class */ (function () {
     }
     HomePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-home',template:/*ion-inline-start:"/Users/andreeaserban/Desktop/personal/Michigan_back_to_work/Ionic_app/src/pages/home/home.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      Ionic Blank\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  The world is your oyster.\n  <p>\n    If you get lost, the <a href="http://ionicframework.com/docs/v3">docs</a> will be your guide.\n  </p>\n</ion-content>\n'/*ion-inline-end:"/Users/andreeaserban/Desktop/personal/Michigan_back_to_work/Ionic_app/src/pages/home/home.html"*/
+            selector: 'page-home',template:/*ion-inline-start:"/Users/bertleon/Desktop/Michigan_back_to_work/Ionic_app/src/pages/home/home.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      Ionic Blank\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  The world is your oyster.\n  <p>\n    If you get lost, the <a href="http://ionicframework.com/docs/v3">docs</a> will be your guide.\n  </p>\n</ion-content>\n'/*ion-inline-end:"/Users/bertleon/Desktop/Michigan_back_to_work/Ionic_app/src/pages/home/home.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */]])
     ], HomePage);
@@ -980,201 +1183,68 @@ var HomePage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 99:
+/***/ 46:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SymptomsPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(15);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__medical_medical__ = __webpack_require__(100);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
-var __generator = (this && this.__generator) || function (thisArg, body) {
-    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
-    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
-    function verb(n) { return function (v) { return step([n, v]); }; }
-    function step(op) {
-        if (f) throw new TypeError("Generator is already executing.");
-        while (_) try {
-            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [0, t.value];
-            switch (op[0]) {
-                case 0: case 1: t = op; break;
-                case 4: _.label++; return { value: op[1], done: false };
-                case 5: _.label++; y = op[1]; op = [0]; continue;
-                case 7: op = _.ops.pop(); _.trys.pop(); continue;
-                default:
-                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
-                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
-                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
-                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
-                    if (t[2]) _.ops.pop();
-                    _.trys.pop(); continue;
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return QUESTIONS; });
+var QUESTIONS = [
+    {
+        "page": "temperature",
+        "questions": [
+            {
+                "question": "What is your temperature today?",
+                "answers": ["Submit", "I did not take my temperature today"]
+            },
+            {
+                "question": "How do you feel today?",
+                "answers": ["Fine", "Not Well", "Submit", "Back"]
             }
-            op = body.call(thisArg, _);
-        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
-        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+        ]
+    },
+    {
+        "page": "symptoms",
+        "questions": [
+            {
+                "question": "** If you are experiencing any of the following emergency symptoms associated with COVID-19, please get medical attention immediately **",
+                "answers": ["* Trouble Breathing", "* Persistent chest pain or pressure", "* New confusion or inability to arouse (“wake up”)", "* Blue-ish lips or face", "Fever", "Cough", "Shortness of breath", "Headache", "Fatigue", "Diarrhea", "Nausea", "Loss of taste/smell", "Submit", "Back"]
+            }
+        ]
+    },
+    {
+        "page": "medical",
+        "questions": [
+            {
+                "question": "Have you contacted a medical provider about your symptoms today?",
+                "answers": ["Yes, by phone.", "Yes, in person.", "No", "Submit", "Back"]
+            },
+            {
+                "question": "Have you had a positive COVID-19 test result since your last report?",
+                "answers": ["Yes", "No", "I had a test but I have not gotten in the results yet.", "Submit", "Back"]
+            },
+            {
+                "question": "Is anyone in your household sick today?",
+                "answers": ["Yes", "No", "Submit", "Back"]
+            }
+        ]
+    },
+    {
+        "page": "tracking",
+        "questions": [
+            {
+                "question": "What is your zipcode?",
+                "answers": ["Back", "Continue"]
+            },
+            {
+                "question": "What is your phone number?",
+                "answers": ["Submit"]
+            }
+        ]
     }
-};
-
-
-
-/**
- * Generated class for the SymptomsPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-var SymptomsPage = /** @class */ (function () {
-    // symptoms = [];
-    function SymptomsPage(navCtrl, navParams, alertCtrl) {
-        this.navCtrl = navCtrl;
-        this.navParams = navParams;
-        this.alertCtrl = alertCtrl;
-    }
-    SymptomsPage.prototype.ionViewWillEnter = function () {
-        console.log('ionViewDidLoad SymptomsPage');
-        this.presentAlertPrompt();
-    };
-    SymptomsPage.prototype.presentAlertPrompt = function () {
-        return __awaiter(this, void 0, void 0, function () {
-            var _this = this;
-            var alert;
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0: return [4 /*yield*/, this.alertCtrl.create({
-                            // title: 'Prompt!',
-                            message: '** If you are experiencing any of the following emergency symptoms associated with COVID-19, please get medical attention immediately **',
-                            inputs: [
-                                {
-                                    name: 'trouble breathing',
-                                    label: '* Trouble Breathing',
-                                    type: 'checkbox',
-                                    value: 'trouble breathing'
-                                },
-                                {
-                                    name: 'chest pain',
-                                    label: '* Persistent chest pain or pressure',
-                                    type: 'checkbox',
-                                    value: 'chest pain'
-                                },
-                                {
-                                    name: 'confusion',
-                                    label: '* New confusion or inability to arouse (“wake up”)',
-                                    type: 'checkbox',
-                                    value: 'confusion'
-                                },
-                                {
-                                    name: 'blue lips',
-                                    label: '* Blue-ish lips or face',
-                                    type: 'checkbox',
-                                    value: 'blue lips'
-                                },
-                                {
-                                    name: 'fever',
-                                    label: 'Fever',
-                                    type: 'checkbox',
-                                    value: 'fever'
-                                },
-                                {
-                                    name: 'cough',
-                                    label: 'Cough',
-                                    type: 'checkbox',
-                                    value: 'cough'
-                                },
-                                {
-                                    name: 'shortness of breath',
-                                    label: 'Shortness of breath',
-                                    type: 'checkbox',
-                                    value: 'shortness of breath'
-                                },
-                                {
-                                    name: 'headache',
-                                    label: 'Headache',
-                                    type: 'checkbox',
-                                    value: 'headache'
-                                },
-                                {
-                                    name: 'fatigue',
-                                    label: 'Fatigue',
-                                    type: 'checkbox',
-                                    value: 'fatigue'
-                                },
-                                {
-                                    name: 'diarrhea',
-                                    label: 'Diarrhea',
-                                    type: 'checkbox',
-                                    value: 'diarrhea'
-                                },
-                                {
-                                    name: 'nausea',
-                                    label: 'Nausea',
-                                    type: 'checkbox',
-                                    value: 'nausea'
-                                },
-                                {
-                                    name: 'loss of taste/smell',
-                                    label: 'Loss of taste/smell',
-                                    type: 'checkbox',
-                                    value: 'loss of taste/smell'
-                                }
-                            ],
-                            buttons: [
-                                {
-                                    text: 'Submit',
-                                    handler: function (data) {
-                                        // this.symptoms = data;
-                                        console.log(data);
-                                        var temp = _this.navParams.get('user_temp');
-                                        _this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__medical_medical__["a" /* MedicalPage */], { user_temp: temp, symptoms: data });
-                                    }
-                                },
-                                {
-                                    text: 'Back',
-                                    handler: function (data) {
-                                        _this.navCtrl.pop();
-                                    }
-                                }
-                            ]
-                        })];
-                    case 1:
-                        alert = _a.sent();
-                        return [4 /*yield*/, alert.present()];
-                    case 2:
-                        _a.sent();
-                        return [2 /*return*/];
-                }
-            });
-        });
-    };
-    SymptomsPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-symptoms',template:/*ion-inline-start:"/Users/andreeaserban/Desktop/personal/Michigan_back_to_work/Ionic_app/src/pages/symptoms/symptoms.html"*/'<!--\n  Generated template for the SymptomsPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-navbar>\n    <ion-title></ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"/Users/andreeaserban/Desktop/personal/Michigan_back_to_work/Ionic_app/src/pages/symptoms/symptoms.html"*/,
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* AlertController */]])
-    ], SymptomsPage);
-    return SymptomsPage;
-}());
-
-//# sourceMappingURL=symptoms.js.map
+];
+//# sourceMappingURL=jsonEnglish.js.map
 
 /***/ })
 
-},[198]);
+},[199]);
 //# sourceMappingURL=main.js.map

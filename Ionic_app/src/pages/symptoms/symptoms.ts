@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController} from 'ionic-angular';
 import { MedicalPage } from '../medical/medical'
+import { QUESTIONS } from '../../assets/json/jsonEnglish'
+
 
 /**
  * Generated class for the SymptomsPage page.
@@ -29,84 +31,84 @@ export class SymptomsPage {
   async presentAlertPrompt() {
     const alert = await this.alertCtrl.create({
       // title: 'Prompt!',
-      message: '** If you are experiencing any of the following emergency symptoms associated with COVID-19, please get medical attention immediately **',
+      message: QUESTIONS[1]["questions"][0]["question"],
       inputs: [
         {
           name: 'trouble breathing',
-          label: '* Trouble Breathing',
+          label: QUESTIONS[1]["questions"][0]["answers"][0],
           type: 'checkbox',
           value: 'trouble breathing'
         },
         {
           name: 'chest pain',
-          label: '* Persistent chest pain or pressure',
+          label:  QUESTIONS[1]["questions"][0]["answers"][1],
           type: 'checkbox',
           value: 'chest pain'
         },
         {
           name: 'confusion',
-          label: '* New confusion or inability to arouse (“wake up”)',
+          label: QUESTIONS[1]["questions"][0]["answers"][2],
           type: 'checkbox',
           value: 'confusion'
         },
         {
           name: 'blue lips',
-          label: '* Blue-ish lips or face',
+          label: QUESTIONS[1]["questions"][0]["answers"][3],
           type: 'checkbox',
           value: 'blue lips'
         },
         {
           name: 'fever',
-          label: 'Fever',
+          label: QUESTIONS[1]["questions"][0]["answers"][4],
           type: 'checkbox',
           value: 'fever'
         },
         {
           name: 'cough',
-          label: 'Cough',
+          label: QUESTIONS[1]["questions"][0]["answers"][5],
           type: 'checkbox',
           value: 'cough'
         },
         {
           name: 'shortness of breath',
-          label: 'Shortness of breath',
+          label: QUESTIONS[1]["questions"][0]["answers"][6],
           type: 'checkbox',
           value: 'shortness of breath'
         },
         {
           name: 'headache',
-          label: 'Headache',
+          label: QUESTIONS[1]["questions"][0]["answers"][7],
           type: 'checkbox',
           value: 'headache'
         },
         {
           name: 'fatigue',
-          label: 'Fatigue',
+          label: QUESTIONS[1]["questions"][0]["answers"][8],
           type: 'checkbox',
           value: 'fatigue'
         },
         {
           name: 'diarrhea',
-          label: 'Diarrhea',
+          label: QUESTIONS[1]["questions"][0]["answers"][9],
           type: 'checkbox',
           value: 'diarrhea'
         },
         {
           name: 'nausea',
-          label: 'Nausea',
+          label: QUESTIONS[1]["questions"][0]["answers"][10],
           type: 'checkbox',
           value: 'nausea'
         },
         {
           name: 'loss of taste/smell',
-          label: 'Loss of taste/smell',
+          label: QUESTIONS[1]["questions"][0]["answers"][11],
           type: 'checkbox',
           value: 'loss of taste/smell'
         }
       ],
       buttons: [
         {
-          text: 'Submit',
+          text: QUESTIONS[1]["questions"][0]["answers"][12],
           handler: data => {
             // this.symptoms = data;
             console.log(data);
@@ -115,7 +117,7 @@ export class SymptomsPage {
           }
         },
         {
-          text: 'Back',
+          text: QUESTIONS[1]["questions"][0]["answers"][13],
           handler: data => {
             this.navCtrl.pop();
           }
