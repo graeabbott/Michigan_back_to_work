@@ -35,7 +35,7 @@ import { MedicalPage } from '../medical/medical'
        message: 'What is your Zip Code?',
        inputs: [
          {
-           name: 'trouble breathing',
+           name: 'zipcode',
            type: 'text',
          }
        ],
@@ -47,10 +47,10 @@ import { MedicalPage } from '../medical/medical'
            }
          },
          {
-           text: 'Submit',
+           text: 'Continue',
            handler: data => {
              //submit the data
-
+             this.addPhoneNumber();
              // this.symptoms = data;
              // console.log(data);
              // var temp = this.navParams.get('user_temp');
@@ -61,6 +61,26 @@ import { MedicalPage } from '../medical/medical'
      });
      await alert.present();
    }
-
+   async addPhoneNumber(){
+     const alert = await this.alertCtrl.create({
+       //Ask for phone number
+       message: 'What is your phone number?',
+       inputs:[
+         {
+           name:'phonenumber',
+           type: 'text',
+         }
+       ],
+       buttons: [
+         {
+           text: 'Submit',
+           handler: data => {
+             // TODO: Finished with the form
+           }
+         }
+       ]
+     });
+     await alert.present();
+   }
 
  }
