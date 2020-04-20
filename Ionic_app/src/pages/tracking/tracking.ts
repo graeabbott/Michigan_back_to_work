@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { AlertController } from 'ionic-angular';
 import { SymptomsPage } from '../symptoms/symptoms'
 import { MedicalPage } from '../medical/medical'
+import { QUESTIONS } from '../../assets/json/jsonEnglish'
 
 
 /**
@@ -32,7 +33,7 @@ import { MedicalPage } from '../medical/medical'
    async presentAlertPrompt() {
      const alert = await this.alertCtrl.create({
        // title: 'Prompt!',
-       message: 'What is your Zip Code?',
+       message: QUESTIONS[3]["questions"][0]["question"],
        inputs: [
          {
            name: 'zipcode',
@@ -41,16 +42,17 @@ import { MedicalPage } from '../medical/medical'
        ],
        buttons: [
          {
-           text: 'Back',
+           text: QUESTIONS[3]["questions"][0]["answers"][0],
            handler: data => {
              this.navCtrl.pop();
            }
          },
          {
-           text: 'Continue',
+           text: QUESTIONS[3]["questions"][0]["answers"][1],
            handler: data => {
              //submit the data
              this.addPhoneNumber();
+
              // this.symptoms = data;
              // console.log(data);
              // var temp = this.navParams.get('user_temp');
@@ -64,7 +66,7 @@ import { MedicalPage } from '../medical/medical'
    async addPhoneNumber(){
      const alert = await this.alertCtrl.create({
        //Ask for phone number
-       message: 'What is your phone number?',
+       message: QUESTIONS[3]["questions"][1]["question"],
        inputs:[
          {
            name:'phonenumber',
@@ -73,7 +75,7 @@ import { MedicalPage } from '../medical/medical'
        ],
        buttons: [
          {
-           text: 'Submit',
+           text: QUESTIONS[3]["questions"][1]["answers"][0],
            handler: data => {
              // TODO: Finished with the form
            }

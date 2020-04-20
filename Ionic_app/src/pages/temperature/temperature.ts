@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { AlertController } from 'ionic-angular';
 import { SymptomsPage } from '../symptoms/symptoms'
+import { QUESTIONS } from '../../assets/json/jsonEnglish'
+
 
 /**
  * Generated class for the TemperaturePage page.
@@ -24,7 +26,7 @@ export class TemperaturePage {
   async presentAlertPrompt() {
     const alert = await this.alertController.create({
       // title: 'Prompt!',
-      message: 'What is your temperature today?',
+      message: QUESTIONS[0]["questions"][0]["question"],
       inputs: [
         {
           name: 'Temperature',
@@ -33,7 +35,7 @@ export class TemperaturePage {
       ],
       buttons: [
         {
-          text: 'Submit',
+          text: QUESTIONS[0]["questions"][0]["answers"][0],
           handler: data => {
             var temp = +data.Temperature // convert to int
             this.user_temp = temp;
@@ -48,7 +50,7 @@ export class TemperaturePage {
           }
         },
         {
-          text: 'I didn\'t take my temperature today',
+          text: QUESTIONS[0]["questions"][0]["answers"][1],
           handler: () => {
             console.log('Confirm no temp');
             this.presentFeelingsForm();
@@ -66,24 +68,24 @@ export class TemperaturePage {
 
   async presentFeelingsForm(){
     const alert = await this.alertController.create({
-      message: 'How do you feel today?',
+      message: QUESTIONS[0]["questions"][1]["question"],
       inputs: [
         {
           name: 'fine',
           type: 'radio',
-          label: 'Fine',
+          label: QUESTIONS[0]["questions"][1]["answers"][0],
           value: 'fine',
         },
         {
           name: 'not well',
           type: 'radio',
-          label: 'Not Well',
+          label: QUESTIONS[0]["questions"][1]["answers"][1],
           value: 'not well',
         },
       ],
       buttons: [
         {
-          text: 'Submit',
+          text: QUESTIONS[0]["questions"][1]["answers"][2],
           handler: data => {
             if(data == 'fine'){
               // push to final resources page
@@ -93,7 +95,7 @@ export class TemperaturePage {
           }
         },
         {
-          text: 'Back',
+          text: QUESTIONS[0]["questions"][1]["answers"][3],
           handler: data => {
             this.presentAlertPrompt()
           }

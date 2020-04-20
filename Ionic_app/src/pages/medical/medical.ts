@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 import { TrackingPage } from '../tracking/tracking'
+import { QUESTIONS } from '../../assets/json/jsonEnglish'
+
 
 /**
  * Generated class for the MedicalPage page.
@@ -31,36 +33,36 @@ export class MedicalPage {
   async contactAlertPrompt() {
     const alert = await this.alertCtrl.create({
       // title: 'Prompt!',
-      message: 'Have you contacted a medical provider about your symptoms today?',
+      message: QUESTIONS[2]["questions"][0]["question"],
       inputs: [
         {
           name: 'yes',
-          label: 'Yes, by phone.',
+          label: QUESTIONS[2]["questions"][0]["answers"][0],
           type: 'radio',
           value: 'phone'
         },
         {
           name: 'yes',
-          label: 'Yes, in person.',
+          label: QUESTIONS[2]["questions"][0]["answers"][1],
           type: 'radio',
           value: 'in person'
         },
         {
           name: 'no',
-          label: 'No',
+          label: QUESTIONS[2]["questions"][0]["answers"][2],
           type: 'radio',
           value: 'no'
         }
       ],
       buttons: [
         {
-          text: 'Submit',
+          text: QUESTIONS[2]["questions"][0]["answers"][3],
           handler: data => {
             this.testingQuestion();
           }
         },
         {
-          text: 'Back',
+          text: QUESTIONS[2]["questions"][0]["answers"][4],
           handler: data => {
             this.navCtrl.pop();
           }
@@ -73,36 +75,36 @@ export class MedicalPage {
   async testingQuestion() {
     const alert = await this.alertCtrl.create({
       // title: 'Prompt!',
-      message: 'Have you had a positive COVID-19 test result since your last report?',
+      message: QUESTIONS[2]["questions"][1]["question"],
       inputs: [
         {
           name: 'yes',
-          label: 'Yes',
+          label: QUESTIONS[2]["questions"][1]["answers"][0],
           type: 'radio',
           value: 'yes'
         },
         {
           name: 'no',
-          label: 'No',
+          label: QUESTIONS[2]["questions"][1]["answers"][1],
           type: 'radio',
           value: 'no'
         },
         {
           name: 'waiting',
-          label: 'I had a test but I have not gotten the results yet.',
+          label: QUESTIONS[2]["questions"][1]["answers"][2],
           type: 'radio',
           value: 'waiting'
         }
       ],
       buttons: [
         {
-          text: 'Submit',
+          text: QUESTIONS[2]["questions"][1]["answers"][3],
           handler: data => {
             this.familyQuestion();
           }
         },
         {
-          text: 'Back',
+          text: QUESTIONS[2]["questions"][1]["answers"][4],
           handler: data => {
             if(this.navParams.get('symptoms').length != 0){
               this.contactAlertPrompt();
@@ -119,24 +121,24 @@ export class MedicalPage {
   async familyQuestion() {
     const alert = await this.alertCtrl.create({
       // title: 'Prompt!',
-      message: 'Is anyone in your household sick today?',
+      message: QUESTIONS[2]["questions"][2]["question"],
       inputs: [
         {
           name: 'yes',
-          label: 'Yes',
+          label: QUESTIONS[2]["questions"][2]["answers"][0],
           type: 'radio',
           value: 'no'
         },
         {
           name: 'no',
-          label: 'No',
+          label: QUESTIONS[2]["questions"][2]["answers"][1],
           type: 'radio',
           value: 'no'
         },
       ],
       buttons: [
         {
-          text: 'Submit',
+          text: QUESTIONS[2]["questions"][2]["answers"][2],
           handler: data => {
             // TODO pull up final info
             //Ask for Zip Code
@@ -144,7 +146,7 @@ export class MedicalPage {
           }
         },
         {
-          text: 'Back',
+          text: QUESTIONS[2]["questions"][2]["answers"][3],
           handler: data => {
             this.testingQuestion();
           }
