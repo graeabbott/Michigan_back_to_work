@@ -6,7 +6,7 @@ Web App for Michigan workers to use in determining their health status amid the 
 
 Short description for high-level folders, for example
 * **Ionic_app:** Web app using Ionic framework and angular with firebase database
-* **Adapted_feedback_form:** Web app adapted from feedback form with firebase database
+* **[Deprecated] Adapted_feedback_form:** Web app adapted from feedback form with firebase database
 
 Use tree command line to list all files
 
